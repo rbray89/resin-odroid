@@ -5,3 +5,5 @@ RESIN_CONFIGS_append = " rtl8152"
 RESIN_CONFIGS[rtl8152] = " \
     CONFIG_USB_RTL8152=m \
 "
+
+FILES_kernel-base += " /boot/uImage "

@@ -9,7 +9,7 @@ RESIN_CONFIGS[rtl8152] = " \
 
 FILES_kernel-base += " /boot/uImage "
 
-DEPENDS_odroid-c2 += " u-boot-mkimage-native"
+DEPENDS += "u-boot-mkimage-native"
 
 do_compile_append_odroid-c2 () {
         uboot-mkimage -A arm64 -O linux -T kernel -C none -a 0x1080000 -e 0x1080000 -n master -d ${B}/arch/${ARCH}/boot/Image ${KERNEL_OUTPUT_DIR}/uImage
